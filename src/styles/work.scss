@@ -1,3 +1,14 @@
+.card{
+
+    
+}
+@media screen and (max-width: 768px) {
+  .card{
+    margin-top: 50vh;
+  }
+
+
+}
 .container-work{
     display: flex;
     flex-direction: column;
@@ -7,7 +18,9 @@
     padding: 10px;
     border-radius: 10px;
     color: white;
+    
 }
+
 .welcome{
     display: flex;
     flex-direction: column;

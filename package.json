@@ -43,6 +43,7 @@
     "@types/node": "^18.14.2",
     "@types/react": "^18.0.28",
     "@types/react-scroll": "^1.8.6",
+    "@types/react-vertical-timeline-component": "^3.3.3",
     "autoprefixer": "^10.4.13",
     "eslint": "^8.34.0",
     "eslint-config-next": "^13.1.6",
