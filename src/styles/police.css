@@ -1,0 +1,10 @@
+@font-face {
+     font-family: 'Proxima Nova';
+     src: url('/fonts/Proxima Nova Font.otf') format('opentype');
+     /* ajoutez les autres formats de fichier de police ici, si nécessaire */
+   }
+   @font-face {
+     font-family: 'Proxima Nova';
+     src: url('/fonts/Proxima Nova Bold Font.otf') format('opentype');
+     font-weight: bold;
+   }

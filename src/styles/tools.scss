@@ -1,0 +1,102 @@
+.container-front:hover, .container-back:hover, .container-ux:hover, .container-devops:hover {
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-family: 'Proxima Nova', sans-serif;
+  color: white;
+  
+}
+.container-all{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    flex-direction: column;
+    font-family: 'Proxima Nova', sans-serif;
+    
+}
+.title-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    text-shadow: 0 0 10px #fff;
+
+}
+.container-2{
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  margin-left: 10%;
+  flex-wrap: wrap;
+}
+
+.title-all-w{
+    font-size: 30px;
+    font-weight: bold;
+    margin: 10px;
+    color: white;
+    text-shadow: 0 0 10px #fff;
+}
+.container-front{
+  display: flex;
+  flex-direction: column;
+  width: 35%;
+  background-image: url(../../public/images/terre.png);
+  background-size: 35%;
+  background-position: center;
+  background-attachment: scroll;
+  background-repeat: no-repeat;
+  
+}
+
+.container-back{
+  display: flex;
+  flex-direction: column;
+  width: 35%;
+  background-image: url(../../public/images/mercure.png);
+  background-size: 35%;
+  background-position: center;
+  background-attachment: scroll;
+  background-repeat: no-repeat;
+}
+
+.container-ux{
+  display: flex;
+  flex-direction: column;
+  width: 35%;
+  background-image: url(../../public/images/lune.png);
+  background-size: 30%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.container-devops{
+  display: flex;
+  width: 35%;
+  background-image: url(../../public/images/mars.png);
+  background-size: 30%;
+  background-position: center;
+  background-attachment: scroll;
+  background-repeat: no-repeat;
+  flex-direction: column;
+}
+.fadeIn {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity .4s ease-out, transform .4s ease-out;
+}
+
+.fadeIn.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+

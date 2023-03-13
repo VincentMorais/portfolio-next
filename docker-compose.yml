@@ -1,0 +1,8 @@
+version: '3.7'
+services:
+  portfolio:
+    image: plantie94/portfolio:0.1.2
+    container_name: portfolio
+    restart: always
+    ports:
+    - 3000:3000
