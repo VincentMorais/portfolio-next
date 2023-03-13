@@ -5,7 +5,7 @@ const projects = [
     description: "Voici le liens de mon code pour le portfolio fait en React.",
     images: "/images/react.png",
     number: 1,
-    link: "https://github.com/splatboydev/Freon-Browser",
+    link: "https://github.com/VincentMorais/portfolio-next",
   },
   {
     title: "Gluon",
@@ -13,15 +13,15 @@ const projects = [
     description: "Voici le liens de mon projet Angular/Api pour un projet d'école.",
     images: "/images/angular-10.png",
     number: 2,
-    link: "https://github.com/pulse-browser/gluon"
+    link: "https://github.com/VincentMorais/angular-projet"
   },
   {
     title: "Portfolio",
     techTitle: "Web (Next, TSX)",
-    description: "Voici le liens du code Flutter de mon projet d'école en liens avec l'API.e",
-    images: "/images/angular-10.png",
+    description: "Voici le liens du code pour le projet inclukhaton",
+    images: "/images/react.png",
     number: 3,
-    link: "https://github.com/splatboydev/Portfolio"
+    link: "https://github.com/VincentMorais/inclukhaton"
   }
 ];
 

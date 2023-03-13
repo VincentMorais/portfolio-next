@@ -7,7 +7,7 @@ const CVGit: FC = () => {
   return (
     <div className="button-container-cv">
       <motion.a
-        href="https://github.com/mon-username"
+        href="https://github.com/VincentMorais"
         className="button-git"
         whileHover={{ y: -10 }}
       >

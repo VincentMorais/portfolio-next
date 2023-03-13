@@ -6,7 +6,7 @@ import Contact from "../components/Contact";
 import EarthCanvas from "../components/Earth";
 import AlternanceList from "../components/alternance";
 import RocketButton from "../components/rocketb";
-import FreezeChrono from "../components/freeze";
+import Frise from "../components/freeze";
 import CVGit from "../components/cvgit";
 import { FC, useEffect, useState } from "react";
 import ScrollTop from "../components/ScrollTop";
@@ -55,7 +55,7 @@ const Home: FC = () => {
         <Work />
         <Tools />
         <AlternanceList />
-        <FreezeChrono items={years}/>
+        <Frise />
         <CVGit />
         <Contact />
       </LayoutGroup>

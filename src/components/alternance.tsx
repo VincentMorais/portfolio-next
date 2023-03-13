@@ -35,8 +35,6 @@ const AlternancesList: FC = () => {
       <h2>{alternance.entreprise}</h2>
       <p>{alternance.poste}</p>
       <p>{alternance.date}</p>
-      <RocketButton link={alternance.link} />
-      <p>cliquer ici</p>
     </div>
   </VisibilitySensor>
 ))}

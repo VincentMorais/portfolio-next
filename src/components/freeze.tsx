@@ -1,69 +1,64 @@
-import { FC, useEffect } from "react";
-import dateData from "../dateData";
+import React from 'react';
+import { motion } from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
 
-interface FreezeChronoProps {
-  items: {
-    year: number;
-    label: string;
-  }[];
-}
+const Frise: React.FC = () => {
+  const years = [
+    { year: '2020', text: 'J\'ai commencé mon cursus universitaire en informatique' },
+    { year: '2022', text: 'J\'ai effectué un stage en développement web et mobile' },
+    { year: '2023', text: 'J\'ai travaillé sur un projet de recherche sur l\'apprentissage automatique' },
+  ];
 
-const FreezeChrono: FC<FreezeChronoProps> = ({ items = dateData }) => {
-  useEffect(() => {
-    function hideIfOffscreen() {
-      const spaceShip = document.querySelector('.space-ship');
-      
-      if (spaceShip) {
-        const rect = spaceShip.getBoundingClientRect();
-    
-        if (rect.right < 0 || rect.left > window.innerWidth) {
-          spaceShip.classList.add('hidden');
-        } else {
-          spaceShip.classList.remove('hidden');
-        }
-      }
-    }
-  
-    window.addEventListener('resize', hideIfOffscreen);
-    hideIfOffscreen();
-    return () => {
-      window.removeEventListener('resize', hideIfOffscreen);
-    };
-  }, []);
+  const containerVariants = {
+    hidden: {},
+    visible: {
+      transition: {
+        staggerChildren: 0.2,
+      },
+    },
+  };
 
-  const firstYear = items[0].year;
-  const lastYear = items[items.length - 1].year;
-  const distanceBetweenYears = lastYear - firstYear;
-  const yearRange = Array.from(Array(distanceBetweenYears + 1).keys()).map(
-    (year) => year + firstYear
-  );
-  const numYearRanges = yearRange.length - 1;
-  const yearRangeWidth = 100 / numYearRanges;
-  const freezeWidth = `${100 / items.length}%`;
+  const yearVariants = {
+    hidden: { opacity: 0, y: -50 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.5, ease: 'easeOut' },
+    },
+  };
+
+  const [ref, inView] = useInView({
+    rootMargin: '-50px 0px',
+    triggerOnce: true,
+  });
 
   return (
-    <div className="freeze-date-container">
-      <div className="freeze-chrono-container">
-        <div className="year-line"></div>
-        <div className="space-ship" />
-      </div>
-      <div className="freeze-date">
-        {items.map((item, index) => {
-          const isLast = index === items.length - 1;
-          const marginLeft = isLast ? "0px" : `${yearRangeWidth}%`;
-          const yearPosition = ((item.year - firstYear) / distanceBetweenYears) * 100;
-          return (
-            <div key={index} className="container-year-label">
-              <p className="year">{item.year}</p>
-              <p className="label">{item.label}</p>
-            </div>
-          );
-        })}
-      </div>
-    </div>
+    <motion.div className="frise-container" variants={containerVariants} initial="hidden" animate={inView ? "visible" : "hidden"} ref={ref}>
+      {years.map(({ year, text }, index) => (
+        <motion.div
+          key={year}
+          className="frise-year"
+          variants={yearVariants}
+        >
+          {year}
+          <motion.div className="frise-text">
+            {text}
+          </motion.div>
+          {index < years.length - 1 && (
+            <motion.div
+              className="frise-line"
+              color='white'
+              initial={{ width: 150 }}
+              animate={{ width: '150px' }}
+              transition={{ duration: 0.5, ease: 'easeOut' }}
+            />
+          )}
+        </motion.div>
+      ))}
+    </motion.div>
   );
 };
 
-export default FreezeChrono;
+export default Frise;
 
 
