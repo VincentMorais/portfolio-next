@@ -31,9 +31,10 @@
     background: url('../../public/images/rockett.gif') center no-repeat;
     background-size: cover;
     animation: move-space-ship 10s linear infinite;
-    z-index: 1;
+    z-index: 0;
+    overflow: hidden;
     background-size: contain;
-    transform: translateY(-155px);
+    transform: translateY(-62%);
   }
   .space-ship.hide {
     display: none;
@@ -47,27 +48,8 @@
   (year: 2017, label: "Troisième année d'études", link: "#"),
 
 );
-
-
-  &:before {
-    position: absolute;
-    content: "";
-    top: 50%;
-    left: 0;
-    transform: translateY(-50%);
-    width: calc(100% / #{length($items)});
-    height: 1px;
-    background-color: white;
-    z-index: -1;
-
-    // repeat for each year label except the last one
-    @for $i from 1 through length($items) - 1 {
-      &:nth-of-type(#{$i}) {
-        left: calc(#{$i} * (100% / #{length($items)}));
-      }
-    }
-  }
 }
+
 
 @keyframes move-space-ship {
   0% {

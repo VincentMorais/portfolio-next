@@ -29,7 +29,10 @@ const Picture: FC = () => {
         animate={{ opacity: 1, transition: { duration: 0.7 } }}
         initial={{ opacity: 0 }}
       >
-     <span><h1 className="name-top">Je suis Vincent Morais.</h1></span>
+      <h1 className="name-top" style={{textAlign: "center"}}>Je suis <span className="nom-prenom">Vincent Morais</span> developpeur full Stack, pasionnée par le developpement front-end et les innovations technologiques. 
+      <br />
+      Bienvenue dans mon <span className="universe">univers</span>.</h1>
+      
       </motion.h1>
       <motion.p
        className="welcome-text"
@@ -40,14 +43,7 @@ const Picture: FC = () => {
         }}
         initial={{ opacity: 0, y: -30 }}
       >
-       <span>
-        <p className="hero">Bienvenue dans mon</p></span>  
-       <span>
-       <span>
-        <h1 className="universe">univers</h1>
-       </span>
-       </span>
-       <br />
+      
         <div className="container-earth">
         <EarthCanvas />
         </div>

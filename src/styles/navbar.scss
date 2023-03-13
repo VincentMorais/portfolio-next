@@ -1,12 +1,115 @@
-.navbar-container-all{
-    background-color:#6a6a6a4f;
+/* Navbar CSS */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
     display: flex;
     align-items: center;
-    transform: none;
-    transform-origin: 50% 50% 0px;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-content: center;
-    justify-content: space-between;
-
-}
+    justify-content: flex-end;
+    padding: 20px;
+    background-color: rgba(51, 51, 51, 0.8);
+    text-align: right;
+  }
+  
+  .navbar-liste {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  .navbar-work,
+  .navbar-tools,
+  .navbar-contact,
+  .navbar-alternances {
+    margin-right: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .navbar-button-list {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
+  .navbar-button-list:hover {
+    background-color: #fff;
+    color: #000;
+  }
+  
+  @media (min-width: 769px) {
+    .navbar-toggle {
+      display: none;
+    }
+  
+    .navbar-liste {
+      flex-direction: row;
+    }
+  
+    .navbar-work,
+    .navbar-tools,
+    .navbar-contact,
+    .navbar-alternances {
+      margin-right: 0;
+      margin-left: 20px;
+    }
+  
+    .navbar {
+      text-align: right;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .navbar {
+      background-color: rgba(51, 51, 51, 0.95);
+    }
+  
+    .navbar-toggle {
+      display: block;
+      margin-left: auto;
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+      width: 30px;
+      height: 30px;
+      position: relative;
+      z-index: 101;
+    }
+  
+    .navbar-toggle-icon {
+      display: block;
+      width: 20px;
+      height: 2px;
+      background-color: #fff;
+      margin-bottom: 4px;
+      transition: transform 0.3s ease;
+    }
+  
+    .navbar-toggle-icon:nth-child(2) {
+      transform-origin: center;
+    }
+  
+    .navbar-collapse {
+      width: 100%;
+      overflow: hidden;
+      transition: height 0.3s ease;
+      height: 0;
+      max-height: 0;
+    }
+  
+    .navbar-collapse.show {
+      height: auto;
+      max-height: 500px; /* ajuster la hauteur maximale selon vos besoins */
+    }
+  
+    .navbar-work,
+    .navbar-tools,
+    .navbar-contact,
+    .navbar-alternances {
+      margin-right: 0;
+      margin-bottom: 10px;
+    }
+  }
+  
