@@ -360,7 +360,7 @@ body {
     justify-content: space-between;
     max-width: 1200px;
     margin: 0 auto;
-    width: 100%;
+    width: 80%;
 
     .contact-description {
       flex-basis: 50%;
@@ -407,16 +407,16 @@ body {
             text-decoration: none;
 
             &:hover .contact-platforms-text {
-              color: #3b82f6;
+              color: #ffffff;
             }
 
-            svg {
-              margin-right: 16px;
-            }
+            
 
             .contact-platforms-text {
-              font-size: 24px;
+              
+              font-size: 20px;
               font-weight: bold;
+
             }
           }
         }

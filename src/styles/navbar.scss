@@ -28,15 +28,15 @@
   }
   
   .navbar-button-list {
-    color: #fff;
+    
     text-decoration: none;
     padding: 10px;
     border-radius: 5px;
   }
   
   .navbar-button-list:hover {
-    background-color: #fff;
-    color: #000;
+    cursor: pointer;
+    text-shadow: 0 0 10px #fff;
   }
   
   @media (min-width: 769px) {

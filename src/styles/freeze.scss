@@ -1,82 +1,79 @@
-// Variables globales
-$primary-color: #007bff;
-$secondary-color: #6c757d;
-
-// Mixins réutilisables
-@mixin flex-center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.chrono__card {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  font-size: 16px;
+  padding: 20px;
+  max-width: 500px;
+  width: 100%;
 }
 
-// Définition de la classe pour la frise chronologique
-.frise-container {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  height: 200px;
-  margin: 20px 0;
-  // Style des éléments de la frise
-  .frise-year {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    background-color: $secondary-color;
-    color: #fff;
-    font-weight: bold;
-    margin-right: 50px;
-    cursor: pointer;
+.chrono__title {
+  color: #000;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
 
-    &:hover {
-      background-color: darken($secondary-color, 10%);
-    }
+.chrono__subtitle {
+  color: #333;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
 
-    // Animation des éléments de la frise
-    .frise-text {
-      position: absolute;
-      top: calc(100% + 10px);
-      left: 50%;
-      transform: translateX(-50%);
-      opacity: 0;
-      background-color: $secondary-color;
-      color: #fff;
-      padding: 10px;
-      border-radius: 5px;
+.chrono__text {
+  color: #666;
+  font-size: 16px;
+}
 
-      &::before {
-        content: '';
-        position: absolute;
-        top: -10px;
-        left: 50%;
-        transform: translateX(-50%);
-        border-top: 10px solid transparent;
-        border-right: 10px solid transparent;
-        border-bottom: 10px solid $secondary-color;
-        border-left: 10px solid transparent;
-      }
-    }
+.chrono__group-title {
+  color: #333;
+  font-size: 24px;
+  margin-bottom: 20px;
+  text-align: center;
+}
 
-    &:hover {
-      .frise-text {
-        opacity: 1;
-        transition: opacity 0.3s ease-in-out;
-      }
-    }
+.chrono__line {
+  background-color: #ccc;
+  height: 2px;
+  margin: 0 auto;
+  position: relative;
+  top: 50%;
+  width: 100%;
+  z-index: -1;
+}
+
+.chrono__item {
+  margin-bottom: 50px;
+  position: relative;
+
+  &:last-child {
+    margin-bottom: 0;
   }
 
-  // Animation de la frise
-  .frise-year {
-    &:nth-child(even) {
-      transform: scale(0.8);
-    }
+  &:before {
+    background-color: #ccc;
+    border-radius: 50%;
+    content: '';
+    height: 20px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    z-index: 1;
+  }
 
-    &:nth-child(odd) {
-      transform: scale(1.2);
-    }
+  &:after {
+    background-color: #fff;
+    border: 2px solid #ccc;
+    border-radius: 50%;
+    content: '';
+    height: 26px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 26px;
+    z-index: 2;
   }
 }
