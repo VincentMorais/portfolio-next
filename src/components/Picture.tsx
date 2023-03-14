@@ -48,7 +48,10 @@ const Picture: FC = () => {
         <EarthCanvas />
         </div>
       </motion.p>
-      
+      <div className="container-scroll">
+      <img className="scroll" src="/images/scroll.gif" alt="GIF animé" />
+      </div>
+
     </motion.div>
    
   );

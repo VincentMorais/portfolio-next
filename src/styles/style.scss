@@ -502,3 +502,14 @@ body {
     font-variation-settings: "wght" 100, "ital" 0;
   }
 }
+.container-scroll{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  
+}
+.scroll{
+  width: 100px;
+  height: 100px;
+}
