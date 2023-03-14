@@ -6,7 +6,7 @@
   margin: 10px;
   font-size: 40px;
   font-weight: bold;
-  background-color: #ffffff;
+  background-color: var(--font-color);
   -webkit-background-clip: text;
   color: transparent;
   margin-top: 30px;
@@ -47,7 +47,7 @@
   font-family: 'Montserrat', sans-serif;
   font-size: 20px;
   font-weight: bold;
-  color: #fff;
+  color: var(--font-color);
   
 
 }

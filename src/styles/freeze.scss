@@ -9,7 +9,7 @@
     top: 0;
     width: 2px;
     height: 100%;
-    background-color: #ffffff;
+    background-color: red;
     z-index: 1;
   }
 }
@@ -21,7 +21,7 @@
 
   .vertical-timeline-element-icon {
     position: absolute;
-    background-color: #ffffff;
+    background-color: var(--font-color);
     top: 0;
     left: 50%;
     z-index: 3;
@@ -29,7 +29,7 @@
     svg {
       width: 20px;
       height: 20px;
-      fill: #000000;
+      fill: var(--timeline-color);
     }
   }
   @media screen and (max-width: 767px) {
@@ -47,7 +47,7 @@
 
 
     .vertical-timeline-element-date {
-      color: #ffffff;
+      color: var(--font-color);
       font-size: 14px;
       font-weight: 500;
       margin: 0;
@@ -109,4 +109,9 @@
       font-size: 14px;
     }
   }
+}
+.vertical-timeline.vertical-timeline--two-columns:before {
+  left: 50%;
+  margin-left: -2px;
+  background-color: var(--font-color);
 }
