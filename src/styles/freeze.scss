@@ -21,7 +21,7 @@
 
   .vertical-timeline-element-icon {
     position: absolute;
-    background-color: var(--font-color);
+    background-color: #fdba31;
     top: 0;
     left: 50%;
     z-index: 3;
@@ -43,7 +43,7 @@
     position: relative;
     margin-left: 40px;
     z-index: 4;
-    background-color: rgb(92, 92, 92);
+    background-color: #620097;
 
 
     .vertical-timeline-element-date {
@@ -54,14 +54,14 @@
     }
 
     .vertical-timeline-element-title {
-      color: #000000;
+      color: #ffffff;
       font-size: 18px;
       font-weight: 600;
       margin: 10px 0 0;
     }
 
     p {
-      color: #000000;
+      color: #fcfcfc;
       font-size: 16px;
     }
 
@@ -113,5 +113,5 @@
 .vertical-timeline.vertical-timeline--two-columns:before {
   left: 50%;
   margin-left: -2px;
-  background-color: var(--font-color);
+  background-color: #620097;
 }

@@ -1,8 +1,8 @@
 :root {
   --background-color: #000000;
   --font-color: #ffffff;
-  --vincentmorais-color: #5700c9;
-  --timeline-color: #00171f;
+  --vincentmorais-color: #620097;
+  --timeline-color: #620097;
   font-family: -apple-system, BlinkMacSystemFont, Roboto, Segoe UI, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
@@ -99,15 +99,6 @@ body {
   text-shadow: 0 0 10px #fff;
 }
 
-.tools{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin: 10px;
-  padding: 10px;
-  border-radius: 10px;
-}
 .alternances{
   display: flex;
   flex-direction: column;
@@ -460,10 +451,9 @@ body {
   color: var(--vincentmorais-color);
   font-variation-settings: "wght" 100, "ital" 0;
   font-family: Oddval Variable;
-  font-size: 35px;
+  font-size: 40px;
   line-height: 80%;
   white-space: nowrap;
-
   animation-duration: 3s;
   animation-iteration-count: infinite;
   animation-name: change;
