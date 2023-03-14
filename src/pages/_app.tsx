@@ -8,12 +8,15 @@ import "../styles/navbar.scss"
 import "../styles/alter.scss"
 import "../styles/rocketbutton.scss"
 import "../styles/freeze.scss"
+
+import LoadingPage from "@/components/chargement";
 import type { AppProps } from "next/app";
 import { Provider } from "react-redux";
-import { StrictMode, useEffect } from "react";
+import { StrictMode, useEffect, useState } from "react";
 
 
 const App = ({ Component, pageProps }: AppProps) => {
+  const [showLoadingPage, setShowLoadingPage] = useState(true);
   useEffect(() => {
     let devEnv = process && process.env.NODE_ENV === "development";
     if (!devEnv) {
@@ -30,17 +33,19 @@ const App = ({ Component, pageProps }: AppProps) => {
     }
   }, []);
   
-  return (
-    <StrictMode>
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShowLoadingPage(false);
+    }, 15000);
 
-        
-        <Component {...pageProps} />
-        
+    return () => clearTimeout(timer);
+  }, []);
 
-      
-    </StrictMode>
-    
-  );
+  if (showLoadingPage) {
+    return <LoadingPage />;
+  }
+
+  return <Component {...pageProps} />;
 };
 
 export default App;
