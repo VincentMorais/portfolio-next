@@ -16,17 +16,18 @@ padding: 10px;
 .container-skills{
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  width: 100%;
   align-content: center;
+  flex-wrap: wrap;
 }
 .image-skills{
-  width: 50%;
+  width: 100%;
 }
 .angular-container{
   border-radius: 2%;
-  background: linear-gradient( 45deg, #620097 30%, #fdba31 100%);
+  background-image: linear-gradient(135deg, #620097 0%, #8a23b6 50%, #620097 100%);
   display: flex;
   flex-direction: column;
   align-items: center;

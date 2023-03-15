@@ -6,7 +6,7 @@ import EarthCanvas from "./Earth";
 const Picture: FC = () => {
   return (
     <motion.div
-     style={{height: "100vh"}}
+     className="container-picture"
       layout
     >
 <motion.div

@@ -436,6 +436,11 @@ body {
   margin-top: 50px;
   margin-bottom: 50px;
 }
+@media screen and (max-width: 768px) {
+  .name-top{
+    font-size: 20px;
+  }
+}
 .container-logo{
   display: flex;
   flex-direction: row;
@@ -459,6 +464,12 @@ body {
   animation-name: change;
   transition-timing-function: ease;
 }
+@media screen and (max-width: 768px) {
+  .nom-prenom{
+    font-size: 20px;
+  }
+}
+  
 
 @keyframes change {
   0% {
@@ -483,4 +494,17 @@ body {
 .scroll{
   width: 100px;
   height: 100px;
+}
+.container-picture{
+  height: 100vh;
+}
+@media screen and (max-width: 1650px) {
+  .container-picture{
+    height: 120vh;
+  }
+}
+@media screen and (max-width: 768px) {
+  .container-picture{
+    height: 150vh;
+  }
 }
